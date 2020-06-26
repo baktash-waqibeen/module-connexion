@@ -48,8 +48,7 @@
 	{
 		$connect = mysqli_connect("localhost","root","","moduleconnexion");
 		
-		$request = "SELECT login,password FROM utilisateurs
-		WHERE login = '".$_POST["login"]."';";
+		$request = "SELECT login,password FROM utilisateurs WHERE login = '".$_POST["login"]."';";
 		
 		$query = mysqli_query($connect,$request);
 		$result = mysqli_fetch_all($query);
